@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Artículos del Blog</h1>
+
+{% for articulo in articulos %}
+    <h2>{{ articulo['titulo']}}</h2>
+    <p>{{ articulo['fecha']}}</p>
+    <p>{{ articulo['articulo']}}</p>
+    <a href="{{ url_for('blog_bp.ver_articulo', id=articulo['id']) }}">Ir a artículo</a>
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% from "_macroform.html" import render_field  %}
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2>{{ articulo['titulo'] }}</h2>
+<p>{{ articulo['articulo'] }}</p>
+<p>{{ articulo['fecha'] }}</p>
+<p>Comenta este artículo:</p>
+<form method=POST>
+    <dl class="formulario">
+        {{ render_field(form.autor) }}
+        {{ render_field(form.comentario) }}
+        {{ render_field(form.boton) }}
+
+    </dl>
+    
+
+</form>
+
+{% endblock %}

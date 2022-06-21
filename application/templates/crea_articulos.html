@@ -1,0 +1,17 @@
+{% from "_macroform.html" import render_field  %}
+{% extends "base.html" %}
+
+{% block content %}
+<form method=POST>
+    <dl class="formulario">
+        {{ render_field(form.titulo) }}
+        {{ render_field(form.articulo) }}
+        {{ render_field(form.button) }}
+
+        {{ render_field(form_tags.nivel) }}
+    </dl>
+    
+
+</form>
+
+{% endblock %}

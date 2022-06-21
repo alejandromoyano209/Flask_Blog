@@ -1,0 +1,20 @@
+h1 {
+	text-align: center;
+	margin-top: 55px;
+}
+
+
+nav a{
+	margin-left: 20px;
+	font-size: 20px;
+
+}
+
+nav {
+	border-bottom: solid 1px black;
+}
+
+footer {
+	background: rgb(200, 200, 200);
+	margin-top: 600px;
+}

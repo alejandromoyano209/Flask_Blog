@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Mensajes recibidos del formulario</h1>
+
+    {% for mensaje in mensajes %}
+        <h2>{{ mensaje['nombre']}}</h2>
+        <p>{{ mensaje['email']}}</p>
+        <p>{{ mensaje['mensaje']}}</p>
+    {% endfor %}
+
+
+
+{% endblock %}

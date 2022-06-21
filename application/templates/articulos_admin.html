@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Artículos del Blog</h1>
+
+{% for articulo in articulos %}
+    <h2>{{ articulo['titulo']}}</h2>
+    <p>{{ articulo['fecha']}}</p>
+    <p>{{ articulo['articulo']}}</p>
+    <a href="{{ url_for('blog_bp.edit_post', id=articulo['id']) }}">Editar artículo</a>
+    
+    <form action="{{ url_for('blog_bp.borrar_articulo', id=articulo['id']) }}" method="POST">
+    <input type="submit" value="Borrar artículo">
+    </form>
+
+{% endfor %}
+
+{% endblock %}
+

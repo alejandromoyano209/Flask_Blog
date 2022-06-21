@@ -1,0 +1,16 @@
+{% from "_macroform.html" import render_field  %}
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Bienvenidos a mi Blog de Cryptos</h1>
+
+
+<form method=POST>
+    <dl class="formulario">
+        {{ render_field(form_tags.nivel) }}
+        <input type="submit" value="Submit">
+    </dl>
+</form>
+
+{% endblock %}
+
